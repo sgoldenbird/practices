@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "imgUrl": "http://localhost:3001/static/01-steamed-rice.png",
+    "title": "쌀밥",
+    "content": "1공기(210g)",
+    "createdAt": 1625340973562,
+    "updatedAt": 1625340973562,
+    "calorie": 300
+  },
+  {
+    "id": 2,
+    "imgUrl": "http://localhost:3001/static/02-boiled-egg.png",
+    "title": "삶은 달걀",
+    "content": "1개(50g)",
+    "createdAt": 1625184428289,
+    "updatedAt": 1625184428289,
+    "calorie": 68
+  },
+  {
+    "id": 3,
+    "imgUrl": "http://localhost:3001/static/03-cherry-tomato.png",
+    "title": "방울토마토",
+    "content": "1개(13g)",
+    "createdAt": 1625330203116,
+    "updatedAt": 1625330203116,
+    "calorie": 2
+  }
+]
