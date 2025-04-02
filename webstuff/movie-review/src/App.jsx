@@ -1,10 +1,10 @@
 import { useState } from "react";
 import ReviewList from "./components/ReviewList.jsx";
-import mockItems from "./data/items.json";
+import { getReviews } from "./api.js";
 
 function App() {
   const [order, setOrder] = useState("createdAt");
-  const [items, setItems] = useState(mockItems);
+  const [items, setItems] = useState([]);
   const sortedItems = items.sort((a, b) => b[order] - a[order]);
 
   const handleNewestClick = () => setOrder("createdAt");
@@ -16,6 +16,11 @@ function App() {
     setItems(nextItems);
   };
 
+  const handleLoadClick = async () => {
+    const { reviews } = await getReviews();
+    setItems(reviews);
+  };
+
   return (
     <div>
       <div>
@@ -23,6 +28,7 @@ function App() {
         <button onClick={handleBestClick}>베스트순</button>
       </div>
       <ReviewList items={sortedItems} onDelete={handleDelete} />
+      <button onClick={handleLoadClick}>리뷰 불러오기</button>
     </div>
   );
 }
